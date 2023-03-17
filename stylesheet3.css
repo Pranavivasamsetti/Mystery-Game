@@ -1,0 +1,8 @@
+.container{ background-color: aliceblue; border: solid; border-radius:10px ; height: 100vh;}
+.flex-container{display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;}
+.flex-item{ background-color: aquamarine; }
+.table{background-color: pink;border: solid; border-radius: 2px;}
+.scoreboard{background-color: #fff0f5; border: solid; border-radius: 10px; height: 400px; width: 450px;}
+.apple{width: 150px; height: 150px; border: solid;border-radius: 20px;}
+.banana{width: 150px; height: 150px; border: solid;border-radius: 20px;}
+img{border-radius: 20px;}

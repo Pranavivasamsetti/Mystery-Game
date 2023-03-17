@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Game</title>
+    <link rel="stylesheet" href="stylesheet3.css">
+</head>
+<body>
+   <h1>Mystery Game</h1> 
+
+<br><br>
+   <div class="container flex-container">
+    <div class="table flex-item">
+        <table>
+            <tr>
+            <td>
+                <img id="pic1" onclick="game(this.id)" src="https://media.istockphoto.com/id/1223839126/photo/black-box-mockup-with-question-mark-sign.jpg?b=1&s=170667a&w=0&k=20&c=M-PTvVApFe6Mh6oLfz5U9g5veQLGIrc1_w5imilqS9M="width="150px"height="150px">
+                <img id="pic2" onclick="game(this.id)" src="https://media.istockphoto.com/id/1223839126/photo/black-box-mockup-with-question-mark-sign.jpg?b=1&s=170667a&w=0&k=20&c=M-PTvVApFe6Mh6oLfz5U9g5veQLGIrc1_w5imilqS9M="width="150px"height="150px">
+                <img id="pic3" onclick="game(this.id)" src="https://media.istockphoto.com/id/1223839126/photo/black-box-mockup-with-question-mark-sign.jpg?b=1&s=170667a&w=0&k=20&c=M-PTvVApFe6Mh6oLfz5U9g5veQLGIrc1_w5imilqS9M="width="150px"height="150px">
+                
+
+            </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img id="pic4" onclick="game(this.id)" src="https://media.istockphoto.com/id/1223839126/photo/black-box-mockup-with-question-mark-sign.jpg?b=1&s=170667a&w=0&k=20&c=M-PTvVApFe6Mh6oLfz5U9g5veQLGIrc1_w5imilqS9M="width="150px"height="150px">
+                    <img id="pic5" onclick="game(this.id)" src="https://media.istockphoto.com/id/1223839126/photo/black-box-mockup-with-question-mark-sign.jpg?b=1&s=170667a&w=0&k=20&c=M-PTvVApFe6Mh6oLfz5U9g5veQLGIrc1_w5imilqS9M="width="150px"height="150px">
+                    <img id="pic6" onclick="game(this.id)" src="https://media.istockphoto.com/id/1223839126/photo/black-box-mockup-with-question-mark-sign.jpg?b=1&s=170667a&w=0&k=20&c=M-PTvVApFe6Mh6oLfz5U9g5veQLGIrc1_w5imilqS9M="width="150px"height="150px">
+                    
+    
+                </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img id="pic7" onclick="game(this.id)" src="https://media.istockphoto.com/id/1223839126/photo/black-box-mockup-with-question-mark-sign.jpg?b=1&s=170667a&w=0&k=20&c=M-PTvVApFe6Mh6oLfz5U9g5veQLGIrc1_w5imilqS9M="width="150px"height="150px">
+                        <img id="pic8" onclick="game(this.id)" src="https://media.istockphoto.com/id/1223839126/photo/black-box-mockup-with-question-mark-sign.jpg?b=1&s=170667a&w=0&k=20&c=M-PTvVApFe6Mh6oLfz5U9g5veQLGIrc1_w5imilqS9M="width="150px"height="150px">
+                        <img id="pic9" onclick="game(this.id)" src="https://media.istockphoto.com/id/1223839126/photo/black-box-mockup-with-question-mark-sign.jpg?b=1&s=170667a&w=0&k=20&c=M-PTvVApFe6Mh6oLfz5U9g5veQLGIrc1_w5imilqS9M="width="150px"height="150px">
+                        
+        
+                    </td>
+                    </tr>
+        </table>
+    </div>
+    <div class="scoreboard flex-container">
+<div class="flex-item apple">
+    <center>
+        <h5>Computer score</h5>
+<img src="https://media.istockphoto.com/id/1141529240/vector/simple-apple-in-flat-style-vector-illustration.jpg?s=612x612&w=0&k=20&c=BTUl_6mGduAMWaGT9Tcr4X6n2IfK4M3HH-KCsr-Hrgs=" width="100px" height="75px">
+<p id="applep">0
+
+</p>
+</center>
+</div>
+
+
+<div class="flex-item banana">
+    <center>
+        <h5>Player score</h5>
+    <img src="https://media.istockphoto.com/id/120492078/photo/banana.jpg?s=612x612&w=0&k=20&c=Xlkb122txfxnF8s7rZGxCZnSX4Qe4ZabXrPCFOG-lIc=" width="100px" height="75px">
+    <p id="bananap">0
+    
+    </p>
+</center>
+</div>
+    </div>
+   </div>
+
+   <script>
+    let bs=0
+    let as=0
+    let mb="https://media.istockphoto.com/id/1223839126/photo/black-box-mockup-with-question-mark-sign.jpg?b=1&s=170667a&w=0&k=20&c=M-PTvVApFe6Mh6oLfz5U9g5veQLGIrc1_w5imilqS9M="
+    function game(box) {
+        let play=document.getElementById(box).src 
+        if (play==mb){
+
+        
+        let x=Math.random()*100
+        x=Math.floor(x)
+        if (x%2==0) {
+            as=as+1
+        document.getElementById ("applep").innerText=as
+        document.getElementById (box).src="https://media.istockphoto.com/id/1141529240/vector/simple-apple-in-flat-style-vector-illustration.jpg?s=612x612&w=0&k=20&c=BTUl_6mGduAMWaGT9Tcr4X6n2IfK4M3HH-KCsr-Hrgs="
+        if (as>4){
+            location.href="Loserpage.html"
+        }
+    }
+    else {
+        bs=bs+1
+        document.getElementById ("bananap").innerText=bs
+        document.getElementById (box).src="https://media.istockphoto.com/id/120492078/photo/banana.jpg?s=612x612&w=0&k=20&c=Xlkb122txfxnF8s7rZGxCZnSX4Qe4ZabXrPCFOG-lIc=" 
+        if (bs>4){
+            location.href="Winnerpage.html"
+        }
+    }
+}
+    
+}
+
+   </script>
+   
+</body>
+</html>
